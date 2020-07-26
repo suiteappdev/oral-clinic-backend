@@ -1,30 +1,21 @@
-var express = require("express");
-var app = express();
-
-var cors = require('cors');
-var cookieParser = require('cookie-parser');
-var morgan = require("morgan");
-var bodyParser = require('body-parser')
+let express = require("express");
+let app = express();
 let logger = require('log4js');
+let config = require(`./config/${process.env.NODE_ENV || 'development'}.config.js`);
 
 app.workspace = __dirname;
 app.locals.logger = logger;
+app.config = config;
 
 (async app => {
         
-        let isReady = require('./boot').boot(app).catch((e)=>{
-            throw(
-                new Error(`[ERROR]: starting app ${e.message}`));
+        let isReady = await require('./boot').boot(app).catch((e)=>{
+            throw(new Error(`[ERROR]: starting app ${e.message}`));
         })
-
-        app.use(cors());
-        app.use(cookieParser());
-        app.use(bodyParser.json());
-        app.use(morgan("dev"));
 
         if(isReady){
             app.listen(process.env.PORT || 9000, function () {
-                console.log(`db-manager started on PORT ${(process.env.PORT || 9000)}`);
+                console.log(`[${process.env.NODE_ENV || 'development'}] - Oral-clinic-backend started on PORT ${(process.env.PORT || 9000)}`);
             });
         }
 

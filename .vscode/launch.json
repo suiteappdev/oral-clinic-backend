@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Oral-clinic-backend",
-            "program": "${workspaceFolder}\\app.js"
+            "program": "${workspaceFolder}/app.js"
         }
     ]
 }

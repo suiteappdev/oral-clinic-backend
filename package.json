@@ -10,11 +10,13 @@
   "author": "Fastcode Dev",
   "license": "ISC",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
     "express": "^4.15.5",
+    "jsonwebtoken": "^8.5.1",
     "log4js": "^0.6.37",
     "mongojs": "^2.6.0",
     "mongoose": "^5.5.6",

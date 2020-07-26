@@ -4,7 +4,7 @@ const connection_string = process.env.MYSQL_CSTRING;
 let logger;
 
 let init = async (app, locals)=>{
-    logger = locals.logger.getLogger("mongodbService");
+    logger = locals.logger.getLogger("mysqlService");
 
     return new Promise(async (resolve, reject)=>{
         
@@ -37,7 +37,7 @@ let initialize = async ()=>{
     return new Promise((resolve, reject)=>{
         try{
             let sequelize = new Sequelize('oralclinicp', 'root', '0126*', {
-                host: 'localhost',
+                host: '190.157.105.91',
                 dialect: 'mysql',
                 define: {
                     timestamps: false,
