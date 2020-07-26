@@ -34,7 +34,10 @@ let login = (req, res)=>{
         
         if(userInfo && userInfo.length > 0){
             let data = userInfo[0];
-            let token = jwt.sign(data, config.JWT_SECRET);
+            let token = jwt.sign({
+                cedula : data.cedula,
+                nombres : data.usuario
+            }, config.JWT_SECRET);
 
             resolve({ data, token });
         }else{

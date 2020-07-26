@@ -99,7 +99,7 @@ let boot = async (app) =>{
             app.use(cors());
             app.use(bodyParser.json());
             app.use(morgan("dev"));
-
+            
             for(s in services){
                 let service = require(`${SERVICE_DIR}${services[s]}`);
                 await service.init(app, app.locals);
