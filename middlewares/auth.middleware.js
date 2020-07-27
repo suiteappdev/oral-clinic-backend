@@ -13,6 +13,7 @@ let getToken = (req)=>{
 }
 
 let auth = (req, res, next)=>{
+    console.log(req);
     if(Object.values(publicPaths).indexOf(req.path) > -1){
         next();
     }else{

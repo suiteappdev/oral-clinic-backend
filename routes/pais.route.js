@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-router.post('/paises', async (req, res)=>{
+router.post('/paises/', async (req, res)=>{
     mainController = req.app.locals.mainController;
     console.log("body", req.body);
     let data = req.body;
