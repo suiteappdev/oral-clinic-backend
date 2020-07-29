@@ -11,6 +11,7 @@ let Init = (app, locals) => {
 	Modulosocp.init(
 		{ 
 		id : { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true }, 
+		orden : Sequelize.INTEGER,
 		nombre : Sequelize.STRING 
 
 	}, 
