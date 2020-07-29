@@ -49,11 +49,13 @@ router.put('/usuarios/:id', async (req, res)=>{
     let id = req.params.id;
     let data = req.body;
                                                         
-   let usuarios = await req.app.locals.controllers.Usuarios.updateUsuarios(id, data, req, res).catch((e)=>{
+    await req.app.locals.controllers.Usuarios.updateUsuarios(id, data, req, res).catch((e)=>{
         return mainController.returnError(res, 500, 0);
     });
 
-    res.status(200).json(usuarios);
+    let usuario = await req.app.locals.controllers.Usuarios.getUsuariosbyid(id, req, res);
+
+    res.status(200).json(usuario);
 });
 
 module.exports = router;
