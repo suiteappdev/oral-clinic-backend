@@ -5,7 +5,8 @@ router.post('/usuarios', async (req, res)=>{
     mainController = req.app.locals.mainController;
     console.log("body", req.body);
     let data = req.body;
-    data.body.fecha = new Date();
+    data.fecha = new Date();
+    data.usuario = data.responsable;
 
     let usuarios = await req.app.locals.controllers.Usuarios.saveUsuarios(data, req, res).catch((e)=>{
         return mainController.returnError(res, 500, 0);
