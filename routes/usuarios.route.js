@@ -5,6 +5,7 @@ router.post('/usuarios', async (req, res)=>{
     mainController = req.app.locals.mainController;
     console.log("body", req.body);
     let data = req.body;
+    data.body.fecha = new Date();
 
     let usuarios = await req.app.locals.controllers.Usuarios.saveUsuarios(data, req, res).catch((e)=>{
         return mainController.returnError(res, 500, 0);
@@ -48,7 +49,8 @@ router.put('/usuarios/:id', async (req, res)=>{
     mainController = req.app.locals.mainController;
     let id = req.params.id;
     let data = req.body;
-                                                        
+    data.fechaupdate = new Date();
+    
     await req.app.locals.controllers.Usuarios.updateUsuarios(id, data, req, res).catch((e)=>{
         return mainController.returnError(res, 500, 0);
     });
