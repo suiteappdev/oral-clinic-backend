@@ -51,6 +51,8 @@ router.put('/usuarios/:id', async (req, res)=>{
     let id = req.params.id;
     let data = req.body;
     data.fechaupdate = new Date();
+    data.fecha = new Date();
+    data.usuario = data.responsable;
     
     await req.app.locals.controllers.Usuarios.updateUsuarios(id, data, req, res).catch((e)=>{
         return mainController.returnError(res, 500, 0);
