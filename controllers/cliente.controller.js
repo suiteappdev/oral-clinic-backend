@@ -28,7 +28,7 @@ let init = (app, locals)=>{
 
 let getCliente = ()=>{
     return new Promise((resolve, reject)=>{
-        models.Cliente.findAll({ raw : true }).then(cliente => resolve(cliente)).catch(e=>reject(e));
+        models.Clientes.findAll({ raw : true }).then(cliente => resolve(cliente)).catch(e=>reject(e));
     });
 }
 
