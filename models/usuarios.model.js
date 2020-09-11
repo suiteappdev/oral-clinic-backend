@@ -20,7 +20,8 @@ let Init = (app, locals) => {
 		id : { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true }, 
 		huell_identificacion : Sequelize.STRING,
 		huell_huella : Sequelize.BLOB,
-		huell_dedo : Sequelize.INTEGER
+		huell_dedo : Sequelize.INTEGER,
+		idperfil : { type: Sequelize.INTEGER, references: 'perfilesocp', referenceskey: 'id' },
 	}, 
 		{ sequelize, modelName: 'usuarios' });
 
