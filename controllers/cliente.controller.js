@@ -7,11 +7,8 @@ let { QueryTypes } = require('sequelize');
 
 
 let lastclid = (req, res)=>{
-
     let db = req.app.locals.services.sequelize;
-
     return new Promise(async (resolve, reject)=>{
-
         const userInfo = await db.query(`SELECT * FROM entidades WHERE id=(SELECT MAX(id) FROM entidades)`, { type: QueryTypes.SELECT }).catch((e)=>reject(e));
         resolve(userInfo);
     });
