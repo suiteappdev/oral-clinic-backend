@@ -15,7 +15,6 @@ let Init = (app, locals) => {
 				type: DataTypes.STRING(10),
 				allowNull: false,
 				defaultValue: ' ',
-				primaryKey: true
 			},
 			zona: {
 				type: DataTypes.STRING(50),
@@ -540,6 +539,8 @@ let Init = (app, locals) => {
 				defaultValue: ' '
 			},
 			id: {
+				primaryKey: true,
+				autoIncrement: true,
 				type: DataTypes.INTEGER(11),
 				allowNull: false
 			},

@@ -3,6 +3,19 @@ let services;
 let logger;
 let db;
 let models;
+let { QueryTypes } = require('sequelize');
+
+
+let lastclid = (req, res)=>{
+
+    let db = req.app.locals.services.sequelize;
+
+    return new Promise(async (resolve, reject)=>{
+
+        const userInfo = await db.query(`SELECT * FROM entidades WHERE id=(SELECT MAX(id) FROM entidades)`, { type: QueryTypes.SELECT }).catch((e)=>reject(e));
+        resolve(userInfo);
+    });
+}
 
 let init = (app, locals)=>{
     logger = locals.logger.getLogger("clienteController");
@@ -19,7 +32,8 @@ let init = (app, locals)=>{
         getCliente,
         deleteCliente,
         updateCliente,
-        getClientebyid
+        getClientebyid,
+        lastclid
     }
 
     logger.info("Initialization finished.");
@@ -28,7 +42,7 @@ let init = (app, locals)=>{
 
 let getCliente = ()=>{
     return new Promise((resolve, reject)=>{
-        models.Clientes.findAll({ raw : true }).then(cliente => resolve(cliente)).catch(e=>reject(e));
+        models.Cliente.findAll({ raw : true }).then(cliente => resolve(cliente)).catch(e=>reject(e));
     });
 }
 

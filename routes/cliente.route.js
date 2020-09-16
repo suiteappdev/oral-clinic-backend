@@ -1,6 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
+router.get('/lastclid', async (req, res)=>{
+    let lastclidData = await req.app.locals.controllers.Cliente.lastclid(req, res);
+ 
+    if(lastclidData){
+         return req.app.locals.mainController.apiResponder(res, 200, lastclidData);
+    }
+ 
+    return req.app.locals.mainController.apiResponder(res, 401, {});
+ });
+
 router.post('/cliente/', async (req, res)=>{
     mainController = req.app.locals.mainController;
     console.log("body", req.body);
@@ -26,7 +36,7 @@ router.get('/cliente', async (req, res)=>{
 router.get('/cliente/:id', async (req, res)=>{
     mainController = req.app.locals.mainController;
     let id = req.params.id;
-    let cliente = await req.app.locals.controllers.Clientes.getClientesbyid(id, req, res).catch((e)=>{
+    let cliente = await req.app.locals.controllers.Cliente.getClientebyid(id, req, res).catch((e)=>{
         return mainController.returnError(res, 500, 0);
     });
 
