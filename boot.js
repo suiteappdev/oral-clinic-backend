@@ -7,7 +7,6 @@ const CONTROLLER_DIR = `${__dirname}/controllers/`;
 const SERVICE_DIR = `${__dirname}/services/`;
 const ROUTE_DIR = `${__dirname}/routes/`;
 const HELPERS_DIR = `${__dirname}/helpers/`;
-const SCHEMAS_DIR = `${__dirname}/models/schemas/`;
 const MIDDLEWARES_DIR = `${__dirname}/middlewares/`;
 
 const utilMiddleware = require('./util/middleware.util');
@@ -60,18 +59,6 @@ let getRoutes= ()=>{
     }); 
 }
 
-let getSchemas= ()=>{
-    return new Promise((resolve, reject)=>{
-        fs.readdir(`${SCHEMAS_DIR}`, (err, items) => {
-            if(err){
-                return reject(err);
-            }
-
-            resolve(items.filter( (js)=>js.match('.js') ) );
-        });   
-    }); 
-}
-
 let getMiddlewares= ()=>{
     return new Promise((resolve, reject)=>{
         fs.readdir(`${MIDDLEWARES_DIR}`, (err, items) => {
@@ -90,7 +77,6 @@ let boot = async (app) =>{
     let services = await getServices();
     let helpers = await getHelpers();
     let routes = await getRoutes();
-    let schemas = await getSchemas();
     let middlewares = await getMiddlewares();
 
     return new Promise(async (resolve, reject)=>{
