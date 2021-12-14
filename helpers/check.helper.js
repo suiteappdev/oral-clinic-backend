@@ -54,7 +54,7 @@ getCustomer = (orders)=>{
         "Ciudad destino" : `${order['Shipping City']}`,
         "Departamento destino" : `${order['Shipping Province Name']}`,
         "Barrio destino" : `${order['Shipping Address2']}`,
-        "Telefono" :`${line['Shipping Phone']}`,
+        "Telefono" :`${order['Shipping Phone']}`,
         "Total a recaudar" :`${order['Total']}`,
         "Total del pedido" :`${order['Total']}`       
     }
