@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const CONTROLLER_DIR = `${__dirname}/controllers/`;
 const SERVICE_DIR = `${__dirname}/services/`;
 const ROUTE_DIR = `${__dirname}/routes/`;
+const HELPERS_DIR = `${__dirname}/helpers/`;
 const MODEL_DIR = `${__dirname}/models/`;
 const SCHEMAS_DIR = `${__dirname}/models/schemas/`;
 const MIDDLEWARES_DIR = `${__dirname}/middlewares/`;
@@ -15,6 +16,18 @@ const utilMiddleware = require('./util/middleware.util');
 let getControllers = ()=>{
     return new Promise((resolve, reject)=>{
         fs.readdir(`${CONTROLLER_DIR}`, (err, items) => {
+            if(err){
+                return reject(err);
+            }
+
+            resolve(items.filter( (js)=>js.match('.js') ) );
+        });   
+    });
+}
+
+let getHelpers = ()=>{
+    return new Promise((resolve, reject)=>{
+        fs.readdir(`${HELPERS_DIR}`, (err, items) => {
             if(err){
                 return reject(err);
             }
@@ -88,6 +101,7 @@ let getMiddlewares= ()=>{
 let boot = async (app) =>{
     let controllers = await getControllers();
     let services = await getServices();
+    let helpers = await getHelpers();
     let routes = await getRoutes();
     let models = await getModels();
     let schemas = await getSchemas();
@@ -123,6 +137,11 @@ let boot = async (app) =>{
             for(c in controllers){
                 let contrls = require(`${CONTROLLER_DIR}${controllers[c]}`)
                 await contrls.init(app, app.locals);
+            }
+
+            for(h in helpers){
+                let helprs = require(`${HELPERS_DIR}${helpers[h]}`)
+                await helprs.init(app, app.locals);
             }
 
             let auth = utilMiddleware.getMiddleWare(app, 'auth');

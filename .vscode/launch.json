@@ -7,7 +7,7 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Oral-clinic-backend",
+            "name": "Rocketfy Plain",
             "program": "${workspaceFolder}/app.js"
         }
     ]

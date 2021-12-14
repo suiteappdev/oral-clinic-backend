@@ -15,7 +15,7 @@ app.config = config;
 
         if(isReady){
             app.listen(process.env.PORT || 9000, function () {
-                console.log(`[${process.env.NODE_ENV || 'development'}] - Oral-clinic-backend started on PORT ${(process.env.PORT || 9000)}`);
+                console.log(`[${process.env.NODE_ENV || 'development'}] - Rocketfy plain service started on PORT ${(process.env.PORT || 9000)}`);
             });
         }
 
