@@ -9,12 +9,12 @@ let checkOrder = (line)=>{
                     "Name" : `${line['Name']}`,
                     "Nombres del destinatario" : `${line['Billing Name']}`,
                     "Apellidos del destinatario" : `${''}`,
-                    "Dirección destino" : `${line['Shipping Address1']}`,
-                    "Ciudad destino" : `${line['Shipping City']}`,
-                    "Departamento destino" : `${line['Shipping Province Name']}`,
-                    "Barrio destino" : `${line['Shipping Address2']}`,
+                    "Dirección destino" : `${line['Shipping Address1'] || line['Billing Address1']}`,
+                    "Ciudad destino" : `${line['Shipping City'] || line['Billing City']} `,
+                    "Departamento destino" : `${line['Shipping Province Name'] || line['Billing Province Name']}`,
+                    "Barrio destino" : `${line['Shipping Address2'] || line['Billing Address2']}`,
                     "Transportadora" : 'servientrega',
-                    "Telefono" : `${line['Shipping Phone']}`,
+                    "Telefono" : `${line['Shipping Phone'] || line['Billing Phone']}`,
                     "Nombre del producto" : `${line['Lineitem name']}`,
                     "Precio del producto" : `${line['Lineitem price']}`,
                     "Cantidad del producto" : `${line['Lineitem quantity']}`,
@@ -42,21 +42,17 @@ let checkOrder = (line)=>{
     });
 }
 
-getCustomer = (orders)=>{
-    let order =  orders.filter((c)=>{
-        return (c['Shipping City'] != '' && c['Shipping Province Name'] != '');
-    })[0];
-
+getCustomer = (order)=>{
     let customer = {
-        "Nombres del destinatario" : `${order['Billing Name']}`,
+        "Nombres del destinatario" : `${order.lineItems[0]['Billing Name']}`,
         "Apellidos del destinatario" : `${''}`,
-        "Dirección destino" : `${order['Shipping Address1']}`,
-        "Ciudad destino" : `${order['Shipping City']}`,
-        "Departamento destino" : `${order['Shipping Province Name']}`,
-        "Barrio destino" : `${order['Shipping Address2']}`,
-        "Telefono" :`${order['Shipping Phone']}`,
-        "Total a recaudar" :`${order['Total']}`,
-        "Total del pedido" :`${order['Total']}`       
+        "Dirección destino" : `${order.lineItems[0]['Shipping Address1']}`,
+        "Ciudad destino" : `${order.lineItems[0]['Shipping City']}`,
+        "Departamento destino" : `${order.lineItems[0]['Shipping Province Name']}`,
+        "Barrio destino" : `${order.lineItems[0]['Shipping Address2']}`,
+        "Telefono" :`${order.lineItems[0]['Shipping Phone'].replace("'", "") ? order.lineItems[0]['Shipping Phone'].replace("'", "") : order.lineItems[0]['Billing Phone'].replace("'", "")}`,
+        "Total a recaudar" :`${order.lineItems[0]['Total']}`,
+        "Total del pedido" :`${order.lineItems[0]['Total']}`       
     }
 
     return customer;

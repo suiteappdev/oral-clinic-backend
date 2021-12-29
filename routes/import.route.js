@@ -34,11 +34,9 @@ router.post('/rocketfy-shopify-format', async (req, res)=>{
                     const o = grouped[index];
 
                     if(o.lineItems.length == 1){
-                        let customer =  req.app.locals.helpers.getCustomer(o.lineItems);
                         for (let index = 0; index < o.lineItems.length; index++) {
                             const line_item = o.lineItems[index];
                             let order_result = await req.app.locals.helpers.checkOrder(line_item).catch((e)=>console.log(e));
-                            order_result = {...order_result, ...customer}
                             csv_data.push(order_result);
                         }
                     }
