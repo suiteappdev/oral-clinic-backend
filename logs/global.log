@@ -266,3 +266,106 @@
 [2021-12-29 12:19:34.653] [INFO] CheckOrder - Loading CheckOrder Helper
 [2021-12-29 12:25:55.943] [INFO] logger - Initialization finished.
 [2021-12-29 12:25:55.947] [INFO] CheckOrder - Loading CheckOrder Helper
+[2021-12-30 17:49:49.585] [INFO] logger - Initialization finished.
+[2021-12-30 17:49:49.587] [INFO] CheckOrder - Loading CheckOrder Helper
+[2021-12-30 17:51:47.693] [INFO] logger - Initialization finished.
+[2021-12-30 17:51:47.694] [INFO] CheckOrder - Loading CheckOrder Helper
+[2021-12-30 17:53:02.417] [INFO] logger - Initialization finished.
+[2021-12-30 17:53:02.419] [INFO] CheckOrder - Loading CheckOrder Helper
+[2021-12-30 17:55:36.292] [INFO] logger - Initialization finished.
+[2021-12-30 17:55:36.294] [INFO] CheckOrder - Loading CheckOrder Helper
+[2021-12-30 17:57:46.866] [INFO] logger - Initialization finished.
+[2021-12-30 17:57:46.872] [INFO] CheckOrder - Loading CheckOrder Helper
+[2021-12-30 18:01:16.351] [INFO] logger - Initialization finished.
+[2021-12-30 18:01:16.357] [INFO] CheckOrder - Loading CheckOrder Helper
+[2021-12-30 18:03:14.777] [INFO] logger - Initialization finished.
+[2021-12-30 18:03:14.783] [INFO] CheckOrder - Loading CheckOrder Helper
+[2021-12-30 18:04:23.253] [INFO] logger - Initialization finished.
+[2021-12-30 18:04:23.260] [INFO] CheckOrder - Loading CheckOrder Helper
+[2021-12-30 18:06:17.399] [INFO] logger - Initialization finished.
+[2021-12-30 18:06:17.405] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-03 10:49:27.527] [INFO] logger - Initialization finished.
+[2022-01-03 10:49:27.561] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 08:16:56.338] [INFO] logger - Initialization finished.
+[2022-01-04 08:16:56.361] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 09:03:38.984] [INFO] logger - Initialization finished.
+[2022-01-04 09:03:38.991] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 09:03:38.994] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 09:04:37.877] [INFO] logger - Initialization finished.
+[2022-01-04 09:04:37.879] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 09:04:37.882] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:25:35.969] [INFO] logger - Initialization finished.
+[2022-01-04 10:25:35.972] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:25:35.973] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:35:10.169] [INFO] logger - Initialization finished.
+[2022-01-04 10:35:10.171] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:35:10.172] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:35:59.024] [INFO] logger - Initialization finished.
+[2022-01-04 10:35:59.025] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:35:59.026] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:36:02.728] [INFO] logger - Initialization finished.
+[2022-01-04 10:36:02.730] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:36:02.731] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:37:16.531] [INFO] logger - Initialization finished.
+[2022-01-04 10:37:16.533] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:37:16.534] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:37:23.591] [INFO] logger - Initialization finished.
+[2022-01-04 10:37:23.594] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:37:23.596] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:39:29.785] [INFO] logger - Initialization finished.
+[2022-01-04 10:39:29.787] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:39:29.789] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:40:50.818] [INFO] logger - Initialization finished.
+[2022-01-04 10:40:50.821] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:40:50.822] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:41:08.414] [INFO] logger - Initialization finished.
+[2022-01-04 10:41:08.416] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:41:08.418] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:42:21.409] [INFO] logger - Initialization finished.
+[2022-01-04 10:42:21.410] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:42:21.411] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:43:48.164] [INFO] logger - Initialization finished.
+[2022-01-04 10:43:48.166] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:43:48.167] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:44:52.613] [INFO] logger - Initialization finished.
+[2022-01-04 10:44:52.615] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:44:52.617] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:48:57.941] [INFO] logger - Initialization finished.
+[2022-01-04 10:48:57.942] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:48:57.948] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:49:50.245] [INFO] logger - Initialization finished.
+[2022-01-04 10:49:50.247] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:49:50.260] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:51:49.747] [INFO] logger - Initialization finished.
+[2022-01-04 10:51:49.749] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:51:49.758] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:52:21.457] [INFO] logger - Initialization finished.
+[2022-01-04 10:52:21.459] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:52:21.466] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:53:15.717] [INFO] logger - Initialization finished.
+[2022-01-04 10:53:15.718] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:53:15.724] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:54:01.678] [INFO] logger - Initialization finished.
+[2022-01-04 10:54:01.680] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:54:01.686] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 10:57:17.500] [INFO] logger - Initialization finished.
+[2022-01-04 10:57:17.501] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 10:57:17.502] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 11:02:37.071] [INFO] logger - Initialization finished.
+[2022-01-04 11:02:37.072] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 11:02:37.073] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 11:02:54.325] [INFO] logger - Initialization finished.
+[2022-01-04 11:02:54.326] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 11:02:54.327] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 11:04:52.993] [INFO] logger - Initialization finished.
+[2022-01-04 11:04:52.997] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 11:04:52.999] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 11:05:39.997] [INFO] logger - Initialization finished.
+[2022-01-04 11:05:39.999] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 11:05:40.001] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 11:06:46.217] [INFO] logger - Initialization finished.
+[2022-01-04 11:06:46.221] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 11:06:46.222] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper
+[2022-01-04 13:33:01.208] [INFO] logger - Initialization finished.
+[2022-01-04 13:33:01.262] [INFO] CheckOrder - Loading CheckOrder Helper
+[2022-01-04 13:33:01.279] [INFO] CheckOrder - Loading checkOrderWoocommerce Helper

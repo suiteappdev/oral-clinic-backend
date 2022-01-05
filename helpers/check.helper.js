@@ -1,5 +1,3 @@
-const { resolve } = require("bluebird");
-
 let logger;
 
 let checkOrder = (line)=>{
@@ -27,11 +25,11 @@ let checkOrder = (line)=>{
                     "Total del pedido" :`${line['Total']}`,
                     "Notas" : `${line['Notes']}`,
                     "Envio gratis" : `${(line['Lineitem requires shipping'] == 'true') ? 'SI' : 'NO'}`,
-                    "Dirección remitente" : `cra 26A#45-56`,
-                    "Ciudad remitente" : `Sincelejo`,
-                    "Departamento remitente" : `Sucre`,
-                    "Barrio remitente" : `pioneros`,
-                    "Celular remitente" : `30024588541`
+                    "Dirección remitente" :`${line.shop.address2}`,
+                    "Ciudad remitente" : `${line.shop.city}`,
+                    "Departamento remitente" : `${line.shop.state}`,
+                    "Barrio remitente" : `${line.shop.address1}`,
+                    "Celular remitente" : `${line.shop.phone}`
                 }
             
             resolve(order)
