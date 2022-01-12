@@ -70,7 +70,7 @@ router.post('/rocketfy-woocommerce-format', async (req, res)=>{
             const o = orders[index];
             if(o.line_items.length == 1){
                 o.shop = shop;
-                let order_result = await req.app.locals.helpers.checkOrderWoocommerce(o).catch((e)=>console.log(e));
+                let order_result = await req.app.locals.helpers.checkOrderWoocommerce(WooCommerce, o).catch((e)=>console.log(e));
                 order_list.push(order_result);
             }
         }

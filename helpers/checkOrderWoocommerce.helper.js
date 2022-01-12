@@ -1,10 +1,19 @@
 
 let logger;
 
-let checkOrderWoocommerce = (order)=>{
+let checkOrderWoocommerce = (woocommerce, order)=>{
     return new Promise(async (resolve, reject)=>{
         try {
-            let order_formated = {
+            let response = await woocommerce.get(`products/${order.line_items[0].product_id}/variations/${order.line_items[0].variation_id}`);
+            if(response && response.data){
+                let dimensions = {};
+    
+                dimensions.weight = response.data.weight;
+                dimensions.height = response.data.dimensions.height;
+                dimensions.width  = response.data.dimensions.width;
+                dimensions.length  = response.data.dimensions.length;
+
+                let order_formated = {
                     "Name" : `${order['order_key']}`,
                     "Nombres del destinatario" : `${order.shipping['first_name']}`,
                     "Apellidos del destinatario" : `${order.shipping['last_name']}`,
@@ -18,10 +27,10 @@ let checkOrderWoocommerce = (order)=>{
                     "Precio del producto" : `${order.line_items[0]['price']}`,
                     "Cantidad del producto" : `${order.line_items[0]['quantity']}`,
                     "createdAt" : order['date_created'],
-                    "Alto" : ``,
-                    "Largo" : ``,
-                    "Ancho" : ``,
-                    "Peso" : ``,
+                    "Alto" : dimensions.height,
+                    "Largo" : dimensions.length,
+                    "Ancho" : dimensions.width,
+                    "Peso" : dimensions.weight,
                     "Total a recaudar" :`${order.line_items[0]['total']}`,
                     "Total del pedido" :`${order.line_items[0]['total']}`,
                     "Notas" : `${order['notes'] || ''}`,
@@ -33,7 +42,8 @@ let checkOrderWoocommerce = (order)=>{
                     "Celular remitente" : `${order.shop.phone}`
                 }
             
-            resolve(order_formated)
+                resolve(order_formated)
+            }
             
         } catch (error) {
             reject(error);
